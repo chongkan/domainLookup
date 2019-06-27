@@ -51,22 +51,6 @@ class DnsAPIControllerTest extends TestCase
     
         $this->assertEquals('No DNS records Found.', $response->original[0][0]->invalid);
     }
-    public function test_it_adds_domain_to_db()
-    {
-        $request = Request::create('/api/domainLookup/', 'POST',[
-            'domains'     =>   ['chongkan.com'],
-        ]); 
-
-        $controller = new DnsAPIController();
-        $response = $controller->domainLookup($request);  
-
-        $domainData = DnsRecord::where('domain', 'chongkan.com')->get()->first();
-        if ($domainData) {
-            $dnsRecords = json_decode($domainData->dns_records);
-        }
-        
-        $this->assertEquals('chongkan.com', $dnsRecords[0]->host);
-    }
 
     public function test_it_gets_the_info_from()
     {
