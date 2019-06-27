@@ -14,11 +14,11 @@
 
 ## Database: 
 
-- There are migrations in place for you to manually create the DB, but due to time constraints and the nature of this project, I have simply removed the dbs from the gitignore file and added them both to the repo. 
+- There are migrations in place for you to manually create the DB (in the migrations folder), but due to time constraints and the nature of this project, I have simply removed the dbs from the gitignore file and added them both to the repo. 
 
 - Verify your hosts file, add the vagrant IP to your hosts files if not present. 
 
-- Navigate to http://chongkan.src (or the domain you condigured) in your browser. 
+- Navigate to http://chongkan.src (or the domain you configured) in your browser. 
 
 ## Unit Testing
 
